@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Video Player</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="main js-home" id="home">
+		<div class="video_container">
+			<video controls id="video" data-url="https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8" width="600" height="400"></video>
+			<div class="js-vp_controls controls">
+				<span data-action="play">PLAY</span>
+				<span data-action="pause">PAUSE</span>
+				<span data-action="getLevels">QUALITY</span>
+			</div>
+			<div class="level_cont"></div>
+		</div>
+
+		<div class="video_loader js-video_loader">
+			<span class="video_spinner"></span>
+		</div>
+	</div>
+
+	<script src="namespace.js" ></script>
+
+	<script src="hls.js" ></script>
+	<script src="videocontroller/videocontroller.js" ></script>
+	<script src="index.js" ></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			new VideoPlayer.Home(document.getElementById("home"));
+		};
+
+	</script>
+</body>
+</html>
